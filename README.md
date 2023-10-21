@@ -24,9 +24,9 @@ Save the data to the file
 # CODE AND OUTPUT
 ```
 import pandas as pd
-import numpy as np
-from google.colab import files
-uploaded = files.upload()
+df=pd.read_csv('Encoding Data.csv')
+df.head()
+
 ```
 ![image](https://github.com/Vaish-1011/ODD2023-Datascience-Ex-05/assets/135130074/5a9ed7ca-0242-49c9-887d-650bc6faa419)
 ```
