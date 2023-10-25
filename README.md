@@ -28,11 +28,11 @@ df=pd.read_csv('Encoding Data.csv')
 df.head()
 
 ```
-![image](https://github.com/Vaish-1011/ODD2023-Datascience-Ex-05/assets/135130074/5a9ed7ca-0242-49c9-887d-650bc6faa419)
+![image](https://github.com/madhi43/ODD2023-Datascience-Ex-05/assets/103943383/1b88e38a-a2a2-4d90-be3e-d8108be70d22)
 ```
 df['ord_2'].unique()
 ```
-![image](https://github.com/Vaish-1011/ODD2023-Datascience-Ex-05/assets/135130074/161aae55-e30c-4c1d-a862-ceebec2bf55d)
+![image](https://github.com/madhi43/ODD2023-Datascience-Ex-05/assets/103943383/528e6bd4-b15d-4ad5-a432-9b0191507637)
 ```
 from sklearn.preprocessing import LabelEncoder,OrdinalEncoder
 climate = ['Cold','Warm','Hot']
@@ -40,36 +40,36 @@ en= OrdinalEncoder(categories = [climate])
 df['ord_2']=en.fit_transform(df[["ord_2"]])
 df
 ```
-![image](https://github.com/Vaish-1011/ODD2023-Datascience-Ex-05/assets/135130074/ca7992ef-4a69-47ea-a11b-0c3efae7d0db)
+![image](https://github.com/madhi43/ODD2023-Datascience-Ex-05/assets/103943383/37e9147e-297a-4800-b7d3-1991db7c7986)
 ```
 le = LabelEncoder()
 df['Nom_0'] = le.fit_transform(df[["nom_0"]])
 df
 ```
-![image](https://github.com/Vaish-1011/ODD2023-Datascience-Ex-05/assets/135130074/b6f5c142-61d4-4b03-b878-41c4ef6be381)
+![image](https://github.com/madhi43/ODD2023-Datascience-Ex-05/assets/103943383/2ef374ab-15b6-4c8b-86c4-16337919a524)
 ```
 !pip install --upgrade category_encoders
 from category_encoders import BinaryEncoder
 be = BinaryEncoder()
 ```
-![image](https://github.com/Vaish-1011/ODD2023-Datascience-Ex-05/assets/135130074/3992b7fd-081a-41aa-964e-19f0c9a72e5a)
+![image](https://github.com/madhi43/ODD2023-Datascience-Ex-05/assets/103943383/9407add1-b79b-4482-b013-b95c704f28e0)
 ```
 data = be.fit_transform(df['bin_1'])
 df  = pd.concat([df,data],axis=1)
 df
 ```
-![image](https://github.com/Vaish-1011/ODD2023-Datascience-Ex-05/assets/135130074/bfe12410-71a3-4b29-9b49-e2531df1a63d)
+![image](https://github.com/madhi43/ODD2023-Datascience-Ex-05/assets/103943383/daab7b30-79bf-4404-9f08-2dbc3e3df486)
 ```
 be = BinaryEncoder()
 data = be.fit_transform(df['bin_2'])
 df  = pd.concat([df,data],axis=1)
 df
 ```
-![image](https://github.com/Vaish-1011/ODD2023-Datascience-Ex-05/assets/135130074/906a2d2f-d36f-469f-8592-84c2b439df1c)
+![image](https://github.com/madhi43/ODD2023-Datascience-Ex-05/assets/103943383/07574905-b967-4f4c-a12e-b33e6b35fd6f)
 ```
 df1['Ord_1'].unique()
 ```
-![image](https://github.com/Vaish-1011/ODD2023-Datascience-Ex-05/assets/135130074/2b0b03e5-b520-419c-b888-f5e4845adf84)
+![image](https://github.com/madhi43/ODD2023-Datascience-Ex-05/assets/103943383/35406f8a-ad96-4b72-878d-4ce982754ebc)
 ```
 from sklearn.preprocessing import LabelEncoder,OrdinalEncoder
 climate = ['Cold','Warm','Hot','Very Hot']
@@ -77,24 +77,24 @@ en= OrdinalEncoder(categories = [climate])
 df1['Ord_1']=en.fit_transform(df1[["Ord_1"]])
 df1
 ```
-![image](https://github.com/Vaish-1011/ODD2023-Datascience-Ex-05/assets/135130074/c322517f-0e18-4b8c-b563-5b3a588e8fa5)
+![image](https://github.com/madhi43/ODD2023-Datascience-Ex-05/assets/103943383/7f70b365-457e-46dd-96ae-f0185608a63b)
 ```
 df1['Ord_2'].unique()
 ```
-![image](https://github.com/Vaish-1011/ODD2023-Datascience-Ex-05/assets/135130074/8a40edb3-ccb7-4097-ba39-9e2838c4671e)
+![image](https://github.com/madhi43/ODD2023-Datascience-Ex-05/assets/103943383/b82bcb1d-b655-4bd6-9fb3-cb8b100d3945)
 ```
 cl = ['High School','Diploma','Bachelors','Masters','PhD']
 en= OrdinalEncoder(categories = [cl])
 df1['Ord_2']=en.fit_transform(df1[["Ord_2"]])
 df1
 ```
-![image](https://github.com/Vaish-1011/ODD2023-Datascience-Ex-05/assets/135130074/0416d008-0d52-48d5-bc75-b16de95c9eea)
+![image](https://github.com/madhi43/ODD2023-Datascience-Ex-05/assets/103943383/577450ef-7bbf-46a0-8388-aee2ed8b5898)
 ```
 le = LabelEncoder()
 df1['City'] = le.fit_transform(df1[["City"]])
 df1
 ```
-![image](https://github.com/Vaish-1011/ODD2023-Datascience-Ex-05/assets/135130074/03dfb5b7-8755-4f63-b145-0ec847a1b842)
+![image](https://github.com/madhi43/ODD2023-Datascience-Ex-05/assets/103943383/23c68591-6b39-49a1-b8dd-1ed170473b35)
 ```
 from category_encoders import BinaryEncoder
 be = BinaryEncoder()
@@ -102,7 +102,7 @@ dat = be.fit_transform(df1['bin_1'])
 df1  = pd.concat([df1,dat],axis=1)
 df1
 ```
-![image](https://github.com/Vaish-1011/ODD2023-Datascience-Ex-05/assets/135130074/d5a53906-47c1-455e-a4ef-8ce8f8ee6c1c)
+![image](https://github.com/madhi43/ODD2023-Datascience-Ex-05/assets/103943383/b6129e71-e29e-487f-a8a8-e14432bad0fb)
 ```
 from category_encoders import BinaryEncoder
 be = BinaryEncoder()
@@ -110,25 +110,25 @@ data1 = be.fit_transform(df1['bin_2'])
 df1  = pd.concat([df1,data1],axis=1)
 df1
 ```
-![image](https://github.com/Vaish-1011/ODD2023-Datascience-Ex-05/assets/135130074/6c0eae13-7769-4cd2-b351-87f278ec8d49)
+![image](https://github.com/madhi43/ODD2023-Datascience-Ex-05/assets/103943383/075be6ee-e715-4199-b4b1-0aa3800cd241)
 ```
 import pandas as pd
 df2 = pd.read_csv("/content/bmi.csv")
 df2.head()
 ```
-![image](https://github.com/Vaish-1011/ODD2023-Datascience-Ex-05/assets/135130074/990ecdc3-9488-4030-a1cc-94c4fe18694b)
+![image](https://github.com/madhi43/ODD2023-Datascience-Ex-05/assets/103943383/d913d151-e22c-4375-b0e6-ca36d39d22e9)
 ```
 be = BinaryEncoder()
 data2 = be.fit_transform(df2['Gender'])
 df2  = pd.concat([df2,data2],axis=1)
 df2
 ```
-![image](https://github.com/Vaish-1011/ODD2023-Datascience-Ex-05/assets/135130074/a46c9667-5a01-498e-beff-6d87e1b2daaa)
+![image](https://github.com/madhi43/ODD2023-Datascience-Ex-05/assets/103943383/fe285e8e-edfd-49bc-90a8-ce81bf3192ad)
 ```
 df2 = pd.get_dummies(df2, prefix=['Index'] ,columns=['Index'])
 df2
 ```
-![image](https://github.com/Vaish-1011/ODD2023-Datascience-Ex-05/assets/135130074/8082656a-3ee1-4097-a835-001f40183765)
+![image](https://github.com/madhi43/ODD2023-Datascience-Ex-05/assets/103943383/22806850-4957-4db7-88f2-b4a9ec0cab40)
 
 
 # RESULT
